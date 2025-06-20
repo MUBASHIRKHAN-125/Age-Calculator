@@ -6,7 +6,10 @@ function AgeSubmit() {
     let yearUs = document.getElementById("Ageuser").value;
     let useryear = new Date(yearUs);
     let userConvert = useryear.getFullYear();
-
+    if (!currentyear || !yearUs) {
+        alert("please fill input!");
+        return;
+    };
     let diffyearResult = diffCurrent - userConvert;
     ///month///
     let currentMonth = document.getElementById("Agecurrent").value;
